@@ -26,18 +26,18 @@ type Props = {
       
     return (
         <div>
-          <h1>The Most Beautiful Woman on Earth</h1>
+          <h1>La Mujer Más Bonita Del Planeta</h1>
           {isPublic ? (
             <div className="photo-container" onClick={handleBurst}>
             <img
               src="/her-photo.jpg"
-              alt="The most beautiful woman"
+              alt="La mujer más bonita"
               className="photo"
             />
           </div>
           ) : (
             <p style={{ fontSize: '1.2rem', color: '#cc3366' }}>
-              If you are the most beautiful woman in the planet, you should know how to log in. 💌
+              Si eres la mujer más bonita, ya sabrás cómo entrar :P  💌
             </p>
           )}
         </div>

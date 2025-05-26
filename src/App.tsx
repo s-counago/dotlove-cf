@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import LandingPage from './LandingPage.tsx';
 import CredentialsPage from './CredentialsPage.tsx';
@@ -22,10 +22,10 @@ function App() {
   }, [isPublic]);
 
   const handleLogin = (username: string, password: string) => {
-    if (username === 'admin' && password === '1234') {
+    if (username === 'miriamlamasguapa' && password === 'amiemonos') {
       setIsLoggedIn(true);
     } else {
-      alert('Invalid credentials');
+      alert('No :(');
     }
   };
 
@@ -33,9 +33,6 @@ function App() {
 
   return (
     <div>
-      <nav style={{ padding: '10px' }}>
-        <Link to="/">Home</Link> | <Link to="/credentials">Credentials</Link>
-      </nav>
       <FloatingEmojis />
       <HeartTrail />
       <Routes>

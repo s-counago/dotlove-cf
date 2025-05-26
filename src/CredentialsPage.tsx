@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 type Props = {
   isLoggedIn: boolean;
@@ -17,6 +19,7 @@ export default function CredentialsPage({
 }: Props) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   if (!isLoggedIn) {
     return (
@@ -28,13 +31,13 @@ export default function CredentialsPage({
         }}>
           <input
             type="text"
-            placeholder="Username"
+            placeholder="Usuaria"
             value={username}
             onChange={e => setUsername(e.target.value)}
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             value={password}
             onChange={e => setPassword(e.target.value)}
           />
@@ -47,13 +50,15 @@ export default function CredentialsPage({
 
   return (
     <div>
-      <h2>Welcome, Love 💕</h2>
-      <p>Your photo is currently: <strong>{isPublic ? 'Public' : 'Private'}</strong></p>
+      <h2>Bienvenida, mi vida 💕</h2>
+      <p>El estado de tu foto ahora mismo es: <strong>{isPublic ? 'Público' : 'Privado'}</strong></p>
       <button onClick={() => setIsPublic(!isPublic)}>
-        {isPublic ? 'Hide It ❌' : 'Show Your Beauty ✨'}
+        {isPublic ? 'Escóndela ❌' : 'Enséñalo todo ✨'}
       </button>
       <br /><br />
-      <button onClick={handleLogout}>Logout</button>
+      <button onClick={() => navigate('/')}>🏠</button>
+      <br /><br />
+      <button onClick={handleLogout}>Cierra sesión</button>
     </div>
   );
 }

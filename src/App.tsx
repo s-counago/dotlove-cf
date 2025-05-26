@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
 import LandingPage from './LandingPage.tsx';
 import CredentialsPage from './CredentialsPage.tsx';

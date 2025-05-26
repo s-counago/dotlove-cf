@@ -25,7 +25,7 @@ type Props = {
       }
       
     return (
-        <div>
+        <div className="landing-big">
           <h1>La Mujer Más Bonita Del Planeta</h1>
           {isPublic ? (
             <div className="photo-container" onClick={handleBurst}>

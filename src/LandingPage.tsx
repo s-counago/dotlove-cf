@@ -34,6 +34,7 @@ type Props = {
               alt="La mujer más bonita"
               className="photo"
             />
+            <h1>Por cierto, mañana a las 21 te llevo a cenar</h1>
           </div>
           ) : (
             <p style={{ fontSize: '1.2rem', color: '#cc3366' }}>

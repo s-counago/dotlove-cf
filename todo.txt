@@ -1,0 +1,2 @@
+undo date text
+remove pic from /public
